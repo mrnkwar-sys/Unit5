@@ -12,7 +12,7 @@ public abstract class Poligono {
 	}
 	
 	public String toString() {
-		return "Número de lados " + numeroLados;
+		return "Número de lados " + numeroLados + "\n";
 	}
 	
 	public abstract double area();
