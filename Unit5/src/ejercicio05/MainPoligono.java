@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class MainPoligono {
 
 	public static Scanner sc = new Scanner(System.in);
+	//La lista que contiene los triángulos y rectángulos
+	ArrayList <Poligono> listaPoligonos = new ArrayList<>();
 
 	public static void main(String[] args) {
-		//La lista que contiene los triángulos y rectángulos
-		ArrayList <Poligono> listaPoligonos = new ArrayList<>();
 		
 		//Opción elegida por el usuario
 		int opcion;
@@ -46,6 +46,10 @@ public class MainPoligono {
 		System.out.println("3. Mostrar polígonos");
 		System.out.println();
 		System.out.println("Elija una de las opciones del menú: ");
+	}
+	
+	public void anadirTriangulo(Triangulo tri) {
+		listaPoligonos.add(tri);
 	}
 
 }

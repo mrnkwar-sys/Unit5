@@ -5,7 +5,7 @@ public class Rectangulo extends Poligono {
 	protected double lado2 = 1;
 	
 	Rectangulo(int lados, double lado1, double lado2){
-		super(lados);
+		super(4);
 		this.lado1 = lado1;
 		this.lado2 = lado2;
 	}
