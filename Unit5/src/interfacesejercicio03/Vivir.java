@@ -1,0 +1,9 @@
+package interfacesejercicio03;
+
+public interface Vivir {
+	void comer();
+	
+	void dormir();
+	
+	void hacerRuido();
+}
