@@ -2,7 +2,7 @@ package interfacesejercicio02;
 
 import java.lang.Comparable;
 
-public class Futbolista implements Comparable<Object>{
+public class Futbolista implements Comparable<Futbolista>{
 	protected int numeroCamiseta;
 	protected String nombre;
 	protected int edad;
@@ -43,7 +43,7 @@ public class Futbolista implements Comparable<Object>{
 	}
 	
 	@Override
-	public int compareTo(Object objeto) {
+	public int compareTo(Futbolista objeto) {
 		int resultado;
 		
 		//Casteo

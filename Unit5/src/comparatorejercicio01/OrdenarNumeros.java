@@ -3,7 +3,7 @@ package comparatorejercicio01;
 import java.util.Arrays;
 import java.util.Random;
 
-public class OrdenarNumeros implements Comparador{
+public class OrdenarNumeros{
 
 	public static void main(String[] args) {
 		Random rand = new Random();
@@ -15,13 +15,10 @@ public class OrdenarNumeros implements Comparador{
 			tablaNumeros[i] = rand.nextInt(0, 101);
 		}
 		
-		System.out.println("Tabla sin ordenar: \n " + Arrays.toString(tablaNumeros));
+		System.out.println("Tabla sin ordenar: \n" + Arrays.toString(tablaNumeros));
 		Arrays.sort(tablaNumeros, new Comparador());
+		System.out.println("Tabla ordenada: \n" + Arrays.toString(tablaNumeros));
 
-	}
-	
-	public int compare(Integer num1, Integer num2) {
-		return num1.compareTo(num2);
 	}
 
 }

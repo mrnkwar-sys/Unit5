@@ -2,7 +2,7 @@ package interfacesejercicio01;
 
 import java.lang.Comparable;
 
-public class Socio implements Comparable<Object>{
+public class Socio implements Comparable<Socio>{
 	protected int id;
 	protected String nombre;
 	protected int edad;
@@ -19,7 +19,7 @@ public class Socio implements Comparable<Object>{
 	}
 	
 	@Override
-	public int compareTo(Object obj) {
+	public int compareTo(Socio obj) {
 		int resultado = 0;
 		
 		//Casteo
