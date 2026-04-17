@@ -6,7 +6,7 @@ public class NegativeMinuteException extends Exception{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public NegativeMinuteException() {
-		super("Minuto negativo");
+	public String toString() {
+		return "Minuto errónea: valor negativo";
 	}
 }

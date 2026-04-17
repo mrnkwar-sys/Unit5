@@ -48,10 +48,7 @@ public class CuentaBancaria implements Comparable<CuentaBancaria>{
 	}
 	
 	@Override
-	public int compareTo(CuentaBancaria obj) {
-		//Casteo
-		CuentaBancaria otraCuenta = (CuentaBancaria) obj;
-		
+	public int compareTo(CuentaBancaria otraCuenta) {
 		return this.numeroCuenta.compareToIgnoreCase(otraCuenta.numeroCuenta);
 	}
 	
