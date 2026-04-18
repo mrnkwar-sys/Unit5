@@ -2,29 +2,26 @@ package excepcionesejercicio01;
 
 public class MainHora {
 
-	public static void main(String[] args) 
-		throws NegativeHourException, NegativeMinuteException, NegativeSecondException {
-			Hora hora1 = new Hora(25, -70, 99);
-			
+	public static void main(String[] args) throws NegativeHourException, NegativeMinuteException, NegativeSecondException {
 			try {
-				hora1.setHour(12);
-			} catch (NegativeHourException e){
-				System.out.println(e.getMessage());
+				Hora horaError = new Hora();
+				horaError.setHour(-5);
+				
+				System.out.println("Este mensaje NO se vera si hay error");
+			} catch (NegativeHourException e) {
+				System.out.println("Se ha capturado el error");
+				System.out.println(e.toString());
 			}
 			
 			try {
-				hora1.setMinute(30);
-			} catch (NegativeMinuteException e){
-				System.out.println(e.getMessage());
+				Hora horaError = new Hora();
+				horaError.setMinute(-10);
+				
+				System.out.println("Este mensaje NO se vera si hay error");
+			} catch (NegativeMinuteException e) {
+				System.out.println("Se ha capturado el error");
+				System.out.println(e.toString());
 			}
-			
-			try {
-				hora1.setSecond(57);
-			} catch (NegativeSecondException e){
-				System.out.println(e.getMessage());
-			}
-			
-			System.out.println(hora1.toString());
 	}
 
 }

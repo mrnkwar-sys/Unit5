@@ -6,7 +6,8 @@ public class NullNameException extends Exception{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	NullNameException(){
-		super("Nombre nulo insertado");
+	@Override
+	public String toString() {
+		return "Nombre nulo insertado";
 	}
 }

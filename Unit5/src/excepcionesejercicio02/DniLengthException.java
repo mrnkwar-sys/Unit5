@@ -6,7 +6,8 @@ public class DniLengthException extends Exception{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	DniLengthException() {
-		super("DNI de longitud inválida");
+	@Override
+	public String toString() {
+		return "DNI de longitud erronea";
 	}
 }

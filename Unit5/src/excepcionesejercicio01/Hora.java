@@ -5,10 +5,10 @@ public class Hora {
 	private int minute;
 	private int second;
 	
-	Hora(int hour, int minute, int second){
-		this.hour = hour;
-		this.minute = minute;
-		this.second = second;
+	Hora(int hour, int minute, int second) throws NegativeHourException, NegativeMinuteException, NegativeSecondException{
+		setHour(hour);
+		setMinute(minute);
+		setSecond(second);
 	}
 	
 	Hora(){

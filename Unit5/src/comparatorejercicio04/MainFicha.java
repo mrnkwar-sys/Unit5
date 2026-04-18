@@ -1,7 +1,6 @@
 package comparatorejercicio04;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class MainFicha {
 
@@ -18,7 +17,7 @@ public class MainFicha {
 		System.out.println("Tabla sin ordenar: \n" + Arrays.deepToString(tablaFichas));
 		Arrays.sort(tablaFichas);
 		System.out.println("Tabla ordenada por id: \n" + Arrays.deepToString(tablaFichas));
-		Arrays.sort(tablaFichas, Comparator.comparing(Ficha::getTitulo));
+		Arrays.sort(tablaFichas, new ComparadorFichas());
 		System.out.println("Tabla ordenada por título: \n" + Arrays.deepToString(tablaFichas));
 
 	}

@@ -40,10 +40,7 @@ public class Titular implements Comparable<Titular>{
 	}
 	
 	@Override
-	public int compareTo(Titular obj) {
-		//Casteo
-		Titular otroTitular = (Titular) obj;
-		
+	public int compareTo(Titular otroTitular) {
 		return this.dni.compareToIgnoreCase(otroTitular.dni);
 	}
 	

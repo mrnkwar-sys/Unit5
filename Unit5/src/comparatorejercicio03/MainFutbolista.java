@@ -15,9 +15,9 @@ public class MainFutbolista{
 		};
 		
 		System.out.println("Tabla sin ordenar: \n" + Arrays.deepToString(tablaFutbolistas));
-		Arrays.sort(tablaFutbolistas, Comparator.comparing(Futbolista::getEdad));
+		Arrays.sort(tablaFutbolistas, new ComparadorEdades());
 		System.out.println("Tabla ordenada por edades: \n" + Arrays.deepToString(tablaFutbolistas));
-		Arrays.sort(tablaFutbolistas, Comparator.comparing(Futbolista::getNumeroGoles));
+		Arrays.sort(tablaFutbolistas, new ComparadorGoles());
 		System.out.println("Tabla ordenada por número de goles: \n" + Arrays.deepToString(tablaFutbolistas));
 		Arrays.sort(tablaFutbolistas, Comparator.comparing(Futbolista::getEdad).thenComparing(Futbolista::getNumeroGoles));
 		System.out.println("Tabla ordenada principalmente por edades y, en caso de empate, por número de goles: \n" + Arrays.deepToString(tablaFutbolistas));

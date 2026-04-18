@@ -21,7 +21,7 @@ public class MainCuentaTitular {
 		System.out.println("Tabla de cuentas sin ordenar: \n" + Arrays.deepToString(listaCuentas));
 		Arrays.sort(listaCuentas);
 		System.out.println("Tabla de cuentas ordenada por el numero de cuenta: \n" + Arrays.deepToString(listaCuentas));
-		Arrays.sort(listaCuentas, Comparator.comparing(CuentaBancaria::getSaldo).reversed());
+		Arrays.sort(listaCuentas, new ComparadorSaldo());
 		System.out.println("Tabla de cuentas ordenada por el saldo: \n" + Arrays.deepToString(listaCuentas));
 
 		System.out.println();
@@ -31,6 +31,8 @@ public class MainCuentaTitular {
 		System.out.println("Tabla de titulares ordenada por el dni: \n" + Arrays.deepToString(listaTitulares));
 		Arrays.sort(listaTitulares, Comparator.comparing(Titular::getApellidos).thenComparing(Titular::getNombre));
 		System.out.println("Tabla de titulares ordenada por los apellidos y, en caso de empate, por el nombre: \n" + Arrays.deepToString(listaTitulares));
+		Arrays.sort(listaTitulares, new ComparadorNombreApellidos());
+		System.out.println("Lo mismo de antes, pero a traves de una clase ComparadorNombreApellidos: \n" + Arrays.deepToString(listaTitulares));
 	}
 
 }
